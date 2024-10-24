@@ -42,11 +42,11 @@ then
 	echo 'submissions_file="./assets/submissions.txt"' >>"$reminder"
 	echo "" >> "$reminder"
 	echo "# Print remaining time and run the reminder function" >> "$reminder"
-	echo 'echo "Assignment: \$ASSIGNMENT"' >> "$reminder"
+	echo 'echo "Assignment: $ASSIGNMENT"' >> "$reminder"
 	echo 'echo "Days remaining to submit: \$DAYS_REMAINING days"' >> "$reminder"
 	echo 'echo "--------------------------------------------"' >> "$reminder"
 	echo "" >> "$reminder"
-	echo "check_submissions \$submissions_file" >> "$reminder"
+	echo "check_submissions $submissions_file" >> "$reminder"
 
 	# Make reminder.sh executable
 	chmod +x "$reminder"
